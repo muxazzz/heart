@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content=""><meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors"><meta name="generator" content="Astro v5.9.2"><title>Checkout example · Bootstrap v5.3</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/checkout/">
+     <!-- ✅ Bootstrap CSS через CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta http-equiv="Cache-Control" content="no-store" />
+  <!-- (необязательно) Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="../assets/js/color-modes.js"></script><link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"><meta name="theme-color" content="#712cf9">
+    <link href="/static/checkout.css" rel="stylesheet"><style>.bd-placeholder-img{font-size:1.125rem;text-anchor:middle;-webkit-user-select:none;-moz-user-select:none;user-select:none}@media (min-width: 768px){.bd-placeholder-img-lg{font-size:3.5rem}}.b-example-divider{width:100%;height:3rem;background-color:#0000001a;border:solid rgba(0,0,0,.15);border-width:1px 0;box-shadow:inset 0 .5em 1.5em #0000001a,inset 0 .125em .5em #00000026}.b-example-vr{flex-shrink:0;width:1.5rem;height:100vh}.bi{vertical-align:-.125em;fill:currentColor}.nav-scroller{position:relative;z-index:2;height:2.75rem;overflow-y:hidden}.nav-scroller .nav{display:flex;flex-wrap:nowrap;padding-bottom:1rem;margin-top:-1px;overflow-x:auto;text-align:center;white-space:nowrap;-webkit-overflow-scrolling:touch}.btn-bd-primary{--bd-violet-bg: #712cf9;--bd-violet-rgb: 112.520718, 44.062154, 249.437846;--bs-btn-font-weight: 600;--bs-btn-color: var(--bs-white);--bs-btn-bg: var(--bd-violet-bg);--bs-btn-border-color: var(--bd-violet-bg);--bs-btn-hover-color: var(--bs-white);--bs-btn-hover-bg: #6528e0;--bs-btn-hover-border-color: #6528e0;--bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);--bs-btn-active-color: var(--bs-btn-hover-color);--bs-btn-active-bg: #5a23c8;--bs-btn-active-border-color: #5a23c8}.bd-mode-toggle{z-index:1500}.bd-mode-toggle .bi{width:1em;height:1em}.bd-mode-toggle .dropdown-menu .active .bi{display:block!important}
+</style></head> 
+
+<body class="bg-body-tertiary"> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> 
+<svg class="bi ms-auto d-none" aria-hidden="true">
+  <use href="#check2"></use></svg> </button> </li> </ul> </div>  <div class="container"> <main> <div class="py-5 text-center"> <img class="d-block mx-auto mb-4" src="https://aocc.ru/wp-content/gallery/images/dynamic/snezhinka.gif-nggid03112-ngg0dyn-160x0x100-00f0w010c011r110f110r010t010.gif" alt="" width="72" height="57"> <h1 class="h2">Оценка риска сердечно-сосудистых заболеваний</h1> 
+    <p class="lead">Это приложение позволяет предварительно оценить риск развития проблем с сердцем на основе ваших медицинских и поведенческих данных.
+  Введите необходимые параметры ниже и получите прогноз на основе обученной модели машинного обучения.</p> </div>  
+  <div class="col-md-7 col-lg-12"> 
+    <h4 class="mb-3">Параметры</h4> 
+    <form class="needs-validation" novalidate method="post">
+      <div class="row g-3">
+    
+        <div class="col-sm-6">
+          <label for="age" class="form-label">Возраст</label>
+          <input type="number" class="form-control" step="any" id="age" name="age" required>
+          <div class="invalid-feedback">Пожалуйста, введите возраст.</div>
+        </div>
+    
+        <div class="col-sm-6">
+          <label for="gender" class="form-label">Пол</label>
+          <select class="form-select" id="gender" name="gender" required>
+            <option value="">Выберите...</option>
+            <option value="Male">Мужской</option>
+            <option value="Female">Женский</option>
+          </select>
+          <div class="invalid-feedback">Пожалуйста, выберите пол.</div>
+        </div>
+    
+        <div class="col-sm-6">
+          <label for="systolic_blood_pressure" class="form-label">systolic_blood_pressure</label>
+          <input type="number" class="form-control" step="any" id="systolic_blood_pressure" name="systolic_blood_pressure" required>
+          <div class="invalid-feedback">Укажите артериальное давление в покое.</div>
+        </div>
+    
+        <div class="col-sm-6">
+          <label for="cholesterol" class="form-label">cholesterol</label>
+          <input type="number" class="form-control" step="any" id="cholesterol" name="cholesterol" required>
+          <div class="invalid-feedback">Укажите уровень холестерина.</div>
+        </div>
+    
+        <div class="col-sm-6">
+          <label for="diastolic_blood_pressure" class="form-label">diastolic_blood_pressure</label>
+          <input type="number" class="form-control" step="any" id="diastolic_blood_pressure" name="diastolic_blood_pressure" required>
+          <div class="invalid-feedback">Укажите артериальное давление в покое.</div>
+        </div>
+        
+
+        <div class="col-sm-6">
+          <label for="physical_activity_days_per_week" class="form-label">physical_activity_days_per_week</label>
+          <input type="number" class="form-control" step="any" id="physical_activity_days_per_week" name="physical_activity_days_per_week" required>
+          <div class="invalid-feedback">Укажите физическую активность.</div>
+        </div>
+
+        <div class="col-sm-6">
+          <label for="triglycerides" class="form-label">triglycerides</label>
+          <input type="number" class="form-control" step="any" id="triglycerides" name="triglycerides" required>
+          <div class="invalid-feedback">Укажите triglycerides</div>
+        </div>
+
+        <div class="col-sm-6">
+          <label for="bmi" class="form-label">bmi</label>
+          <input type="number" class="form-control" step="any" id="bmi" name="bmi" required>
+          <div class="invalid-feedback">Укажите bmi</div>
+        </div>
+
+        <div class="col-sm-6">
+          <label for="income" class="form-label">income</label>
+          <input type="number" class="form-control" step="any" id="income" name="income" required>
+          <div class="invalid-feedback">Укажите доход</div>
+        </div>
+
+        <div class="col-sm-6">
+          <label for="sedentary_hours_per_day" class="form-label">sedentary_hours_per_day</label>
+          <input type="number" class="form-control" step="any" id="sedentary_hours_per_day" name="sedentary_hours_per_day" required>
+          <div class="invalid-feedback">Укажите sedentary_hours_per_day</div>
+        </div>
+
+        <div class="col-sm-6">
+          <label for="sleep_hours_per_day" class="form-label">sleep_hours_per_day</label>
+          <input type="number" class="form-control" step="any" id="sleep_hours_per_day" name="sleep_hours_per_day" required>
+          <div class="invalid-feedback">Укажите sleep_hours_per_day</div>
+        </div>
+
+    
+        <div class="col-sm-6">
+          <label for="exercise_hours_per_week" class="form-label">exercise_hours_per_week</label>
+          <input type="number" class="form-control" step="any" id="exercise_hours_per_week" name="exercise_hours_per_week" required>
+          <div class="invalid-feedback">Укажите exercise_hours_per_week</div>
+        </div>
+        <div class="col-sm-6">
+          <label for="heart_rate" class="form-label">heart_rate</label>
+          <input type="number" class="form-control" step="any" id="heart_rate" name="heart_rate" required>
+          <div class="invalid-feedback">Укажите heart_rate</div>
+        </div>
+
+      </div>
+    
+
+
+
+      <hr class="my-4">
+    
+<button class="w-100 btn btn-primary btn-lg" type="submit">Получить результаты</button> </form> </div> 
+{% if result is not none and result > 50 %}
+    <div class="alert alert-danger" style='margin:5px; text-align:center'>
+      Пациент в зоне риска: <strong>{{ answer }} </strong>
+      <br>
+      Вероятность проблем с сердцем: <strong>{{ result }}%</strong>
+    </div>
+  {% elif result is not none and result < 50 %}
+    <div class="alert alert-info" style='margin:5px; text-align:center'>
+      Пациент в зоне риска: <strong>{{ answer }} </strong>
+      <br>
+      Вероятность проблем с сердцем: <strong>{{ result }}%</strong>
+    </div>
+  {% endif %}
+</div> 
+<div class="alert" style='margin:5px; text-align:center'>
+<a href="/form">или загрузите файл </a>
+</div>
+</main> 
+
+
+
+<footer class="my-5 pt-5 text-body-secondary text-center text-small"> <!-- Кнопка для открытия инструкции -->
+  <button type="button" class="btn btn-info mt-3" data-bs-toggle="modal" data-bs-target="#instructionModal">
+    Инструкция
+  </button>
+  
+  <!-- Модальное окно с инструкцией -->
+  <div class="modal fade" id="instructionModal" tabindex="-1" aria-labelledby="instructionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h5 class="modal-title" id="instructionModalLabel">Инструкция по использованию</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        
+        <div class="modal-body">
+          <p><strong>Это приложение предназначено для оценки риска сердечного приступа на основе введённых параметров.</strong></p>
+          
+          <ol>
+            <li>Заполните все поля в форме на главной странице:
+              <ul>
+                <li>Возраст</li>
+                <li>Пол</li>
+                <li>Пульс, давление, холестерин и другие медицинские параметры</li>
+              </ul>
+            </li>
+            <li>Нажмите кнопку <strong>Получить результаты</strong>.</li>
+            <li>После обработки вы увидите вероятность сердечного приступа в процентах и вывод: <em>«Да»</em> или <em>«Нет»</em>.</li>
+          </ol>
+          
+          <p>Также вы можете загрузить CSV-файл с тестовой выборкой на странице загрузки файлов. Приложение вернёт JSON-ответ с результатами предсказаний.</p>
+          
+          <p class="text-muted">Примечание: это демонстрационное приложение и не заменяет медицинскую диагностику.</p>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        </div>
+        
+      </div>
+    </div>
+  </div> 
+</footer> </div>   
+
+<script src="../assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script> 
+
+
+
+
+<script src="/static/checkout.js" class="astro-vvvwv3sm"></script> </body> </html>
